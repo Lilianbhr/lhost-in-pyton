@@ -1,5 +1,5 @@
-import pygame.font
-from interface import Interface
+import pygame
+from src.interfaces.interface import Interface
 
 
 class Game(Interface):

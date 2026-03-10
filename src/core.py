@@ -1,6 +1,6 @@
 import pygame
-from game import Game
-from menu import Menu
+from src.interfaces.game import Game
+from src.interfaces.menu import Menu
 
 
 class Core:
