@@ -18,6 +18,12 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        elif event.type == pygame.KEYDOWN:
+            key = pygame.key.name(event.key)
+            mode.add_input(key)
+        elif event.type == pygame.KEYUP:
+            key = pygame.key.name(event.key)
+            mode.rm_input(key)
 
     pygame.display.flip()
     clock.tick(60)
