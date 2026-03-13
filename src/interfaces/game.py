@@ -20,7 +20,7 @@ class Game(Interface):
         self.map_manager.focus(self.player.rect.center)
 
     def update(self, inputs: set):
-        self.player.update(inputs)
+        self.player.update(inputs, self.map_manager.get_map_size())
         self.map_manager.focus(self.player.rect.center)
 
     def display(self, surface: pygame.Surface):

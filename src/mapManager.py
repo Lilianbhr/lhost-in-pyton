@@ -26,6 +26,12 @@ class MapManager:
                 return obj.x, obj.y
         return 0, 0
 
+    def get_map_size(self):
+        tile_size = self.tmx_data.tilewidth
+        width = self.tmx_data.width
+        height = self.tmx_data.height
+        return width * tile_size, height * tile_size
+
     def change_map(self, map_name: str):
         self.group = self.set_map(map_name)
 
