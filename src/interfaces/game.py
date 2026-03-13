@@ -15,7 +15,7 @@ class Game(Interface):
         self.map_manager = MapManager(self.screen_size)
         self.player = Player()
 
-        self.player.rect.topleft = self.map_manager.get_spawn_point()
+        self.player.precise_pos = self.map_manager.get_spawn_point()
         self.map_manager.group.add(self.player)
         self.map_manager.focus(self.player.rect.center)
 

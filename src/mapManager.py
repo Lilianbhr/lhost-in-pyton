@@ -23,7 +23,7 @@ class MapManager:
     def get_spawn_point(self):
         for obj in self.tmx_data.objects:
             if obj.name == "spawn_point":
-                return obj.x, obj.y
+                return [obj.x, obj.y]
         return 0, 0
 
     def get_map_size(self):
