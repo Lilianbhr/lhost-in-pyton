@@ -9,16 +9,26 @@ class MapManager:
         self.screen_size = screen_size
         self.tmx_data = None
         self.group = self.set_map("map_1")
+        self.portals = []
+        self.set_portals()
 
     def set_map(self, map_name: str) -> pyscroll.PyscrollGroup:
         """ Permet de charger une map """
         self.tmx_data = load_pygame(self.map_dir + map_name + ".tmx")
+        self.set_portals()
         map_layer = pyscroll.BufferedRenderer(
             data=pyscroll.TiledMapData(self.tmx_data),
             size=self.screen_size
         )
         group = pyscroll.PyscrollGroup(map_layer)
         return group
+
+    def set_portals(self):
+        self.portals = []
+        for obj in self.tmx_data.objects:
+            if obj.type == "portal":
+                rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
+                self.portals.append((rect, obj.name))
 
     def get_spawn_point(self):
         for obj in self.tmx_data.objects:

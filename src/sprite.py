@@ -8,7 +8,7 @@ class Player(pygame.sprite.Sprite):
 
         # Visuel + collisions
         self.image = pygame.Surface((32, 64))
-        self.image.fill((0, 0, 255))
+        self.image.fill((255, 255, 0))
         self.rect = self.image.get_rect()
 
         # Position + Déplacements
