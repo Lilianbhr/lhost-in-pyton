@@ -21,6 +21,10 @@ class Core:
         elif self.current_mode.nom == "game":
             self.current_mode = Menu()
 
+    def update(self):
+        if self.current_mode.nom == "game":
+            self.current_mode.update(self.inputs)
+
     def display(self):
         self.screen.fill((255, 255, 255))
         self.current_mode.display(self.screen)

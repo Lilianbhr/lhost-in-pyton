@@ -1,6 +1,7 @@
 import pygame
 from src.interfaces.interface import Interface
 from src.mapManager import MapManager
+from src.sprite import Player
 
 
 class Game(Interface):
@@ -11,6 +12,13 @@ class Game(Interface):
         self.font = pygame.font.SysFont("Arial", 24)
         self.screen_text = self.font.render(self.nom, True, (0, 0, 0))
         self.map_manager = MapManager(self.screen_size)
+        self.player = Player()
+        self.map_manager.group.add(self.player)
+        self.map_manager.focus(self.player.rect.center)
+
+    def update(self, inputs: set):
+        self.player.update(inputs)
+        self.map_manager.focus(self.player.rect.center)
 
     def display(self, surface: pygame.Surface):
         surface.blit(self.screen_text, (0, 0))

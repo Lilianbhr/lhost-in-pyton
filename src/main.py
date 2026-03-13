@@ -13,6 +13,7 @@ running = True
 
 while running:
 
+    mode.update()
     mode.display()
 
     for event in pygame.event.get():
