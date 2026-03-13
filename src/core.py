@@ -17,9 +17,13 @@ class Core:
 
     def change_mode(self):
         if self.current_mode.nom == "menu":
-            self.current_mode = Game()
+            self.current_mode = Game(self.screen.get_size())
         elif self.current_mode.nom == "game":
             self.current_mode = Menu()
+
+    def update(self):
+        if self.current_mode.nom == "game":
+            self.current_mode.update(self.inputs)
 
     def display(self):
         self.screen.fill((255, 255, 255))
