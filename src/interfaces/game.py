@@ -1,7 +1,7 @@
 import pygame
 from src.interfaces.interface import Interface
-from src.mapManager import MapManager
-from src.sprite import Player
+from src.graphics.mapManager import MapManager
+from src.graphics.sprite import Player
 
 
 class Game(Interface):
