@@ -17,7 +17,7 @@ class Core:
 
     def change_mode(self):
         if self.current_mode.nom == "menu":
-            self.current_mode = Game()
+            self.current_mode = Game(self.screen.get_size())
         elif self.current_mode.nom == "game":
             self.current_mode = Menu()
 
