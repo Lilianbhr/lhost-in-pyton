@@ -1,7 +1,7 @@
 import pygame
 from src.interfaces.interface import Interface
-from src.mapManager import MapManager
-from src.sprite import Player
+from src.graphics.mapManager import MapManager
+from src.graphics.sprite import Player
 
 
 class Game(Interface):
@@ -24,6 +24,14 @@ class Game(Interface):
 
     def update(self, inputs: set):
         self.player.update(inputs, self.map_manager.get_map_size())
+
+        # Vérification qu'un portail à été franchi
+        for portal in self.map_manager.portals:
+            if self.player.rect.colliderect(portal[0]):
+                self.map_manager.change_map(portal[1])
+                self.player.precise_pos = self.map_manager.get_spawn_point()
+                self.map_manager.group.add(self.player)
+
         self.map_manager.focus(self.player.rect.center)
 
     def display(self, surface: pygame.Surface):
