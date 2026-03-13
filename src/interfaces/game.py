@@ -5,16 +5,19 @@ from src.sprite import Player
 
 
 class Game(Interface):
+    """
+    Le gestionnaire de jeu, il contient la map, le joueur etc...
+    """
     def __init__(self, screen_size: tuple):
         super().__init__()
         self.nom = "game"
         self.screen_size = screen_size
-        self.font = pygame.font.SysFont("Arial", 24)
-        self.screen_text = self.font.render(self.nom, True, (0, 0, 0))
 
+        # Map + Joueur
         self.map_manager = MapManager(self.screen_size)
         self.player = Player()
 
+        # Ajout du joueur aux éléments visibles par l'utilisateur
         self.player.precise_pos = self.map_manager.get_spawn_point()
         self.map_manager.group.add(self.player)
         self.map_manager.focus(self.player.rect.center)
@@ -24,5 +27,4 @@ class Game(Interface):
         self.map_manager.focus(self.player.rect.center)
 
     def display(self, surface: pygame.Surface):
-        surface.blit(self.screen_text, (0, 0))
         self.map_manager.display(surface)

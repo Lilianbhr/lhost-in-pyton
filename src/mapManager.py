@@ -9,9 +9,9 @@ class MapManager:
         self.screen_size = screen_size
         self.tmx_data = None
         self.group = self.set_map("map_1")
-        self.focus((320, 320))
 
     def set_map(self, map_name: str) -> pyscroll.PyscrollGroup:
+        """ Permet de charger une map """
         self.tmx_data = load_pygame(self.map_dir + map_name + ".tmx")
         map_layer = pyscroll.BufferedRenderer(
             data=pyscroll.TiledMapData(self.tmx_data),

@@ -4,6 +4,10 @@ from src.interfaces.menu import Menu
 
 
 class Core:
+    """
+    Le noyaux du jeu, c'est lui qui gère les changements
+    de modes et les touches
+    """
     def __init__(self, screen: pygame.Surface):
         self.screen = screen
         self.inputs = set()

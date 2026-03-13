@@ -3,6 +3,9 @@ from src.interfaces.interface import Interface
 
 
 class Menu(Interface):
+    """
+    Interface de base du jeu
+    """
     def __init__(self):
         super().__init__()
         self.nom = "menu"
