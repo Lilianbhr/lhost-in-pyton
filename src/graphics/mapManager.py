@@ -7,8 +7,11 @@ class MapManager:
     def __init__(self, screen_size: tuple):
         self.map_dir = "../assets/map/maps_tmx/"
         self.screen_size = screen_size
+
         self.tmx_data = None
+        self.zoom = 1.3
         self.group = self.set_map("map_1")
+
         self.portals = []
         self.set_portals()
 
@@ -18,7 +21,8 @@ class MapManager:
         self.set_portals()
         map_layer = pyscroll.BufferedRenderer(
             data=pyscroll.TiledMapData(self.tmx_data),
-            size=self.screen_size
+            size=self.screen_size,
+            zoom=self.zoom
         )
         group = pyscroll.PyscrollGroup(map_layer)
         return group
