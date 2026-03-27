@@ -18,7 +18,7 @@ class Game(Interface):
         self.player = Player()
 
         # Ajout du joueur aux éléments visibles par l'utilisateur
-        self.player.precise_pos = self.map_manager.get_spawn_point()
+        self.player.rect.topleft = self.map_manager.get_spawn_point()
         self.map_manager.group.add(self.player)
         self.map_manager.focus(self.player.rect.center)
 

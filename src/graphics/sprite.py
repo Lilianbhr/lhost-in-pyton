@@ -24,27 +24,21 @@ class Player(pygame.sprite.Sprite):
     def draw(self, screen: pygame.Surface):
         screen.blit(self.image, self.rect)
 
-    def set_rect_pos(self):
-        self.rect.topleft = (round(self.precise_pos[0]),
-                             round(self.precise_pos[1]))
-
     def collision(self, walls: list, movement: pygame.Vector2, axis: str):
         for wall in walls:
             if self.rect.colliderect(wall):
 
                 if axis == "x":
                     if movement.x < 0:
-                        self.precise_pos[0] = wall.right
+                        self.rect.x = wall.right
                     elif movement.x > 0:
-                        self.precise_pos[0] = wall.x - self.rect.w
+                        self.rect.right = wall.x
 
                 elif axis == "y":
                     if movement.y < 0:
-                        self.precise_pos[1] = wall.bottom
+                        self.rect.y = wall.bottom
                     elif movement.y > 0:
-                        self.precise_pos[1] = wall.y - self.rect.h
-
-            self.set_rect_pos()
+                        self.rect.bottom = wall.y
 
     def update(self, active_inputs: set, screen_size: tuple, walls: list):
         """
@@ -53,7 +47,6 @@ class Player(pygame.sprite.Sprite):
         notamment sur les diagonales
         """
         final_direction = pygame.math.Vector2(0, 0)
-        old_pos = self.precise_pos
 
         # Récupération des forces actives
         for key in self.directions.keys():
@@ -66,27 +59,25 @@ class Player(pygame.sprite.Sprite):
             final_direction = final_direction.normalize()
 
         # déplacement précis (séparation x/y pour les collisions)
-        self.precise_pos[0] += final_direction.x * self.speed
+        self.rect.x += final_direction.x * self.speed
         self.collision(walls, final_direction, "x")
 
-        self.precise_pos[1] += final_direction.y * self.speed
+        self.rect.y += final_direction.y * self.speed
         self.collision(walls, final_direction, "y")
 
         # empêcher le joueur de sortir de la carte
         # gauche
-        if self.precise_pos[0] < 0:
-            self.precise_pos[0] = 0
+        if self.rect.x < 0:
+            self.rect.x = 0
 
         # droite
-        elif self.precise_pos[0] + self.rect.width > screen_size[0]:
-            self.precise_pos[0] = screen_size[0] - self.rect.width
+        elif self.rect.right > screen_size[0]:
+            self.rect.right = screen_size[0]
 
         # haut
-        if self.precise_pos[1] < 0:
-            self.precise_pos[1] = 0
+        if self.rect.y < 0:
+            self.rect.y = 0
 
         # bas
-        elif self.precise_pos[1] + self.rect.height > screen_size[1]:
-            self.precise_pos[1] = screen_size[1] - self.rect.height
-
-        self.set_rect_pos()
+        elif self.rect.bottom > screen_size[1]:
+            self.rect.bottom = screen_size[1]
