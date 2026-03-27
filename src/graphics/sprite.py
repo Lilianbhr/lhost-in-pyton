@@ -24,13 +24,36 @@ class Player(pygame.sprite.Sprite):
     def draw(self, screen: pygame.Surface):
         screen.blit(self.image, self.rect)
 
-    def update(self, active_inputs: set, screen_size: tuple):
+    def set_rect_pos(self):
+        self.rect.topleft = (round(self.precise_pos[0]),
+                             round(self.precise_pos[1]))
+
+    def collision(self, walls: list, movement: pygame.Vector2, axis: str):
+        for wall in walls:
+            if self.rect.colliderect(wall):
+
+                if axis == "x":
+                    if movement.x < 0:
+                        self.precise_pos[0] = wall.right
+                    elif movement.x > 0:
+                        self.precise_pos[0] = wall.x - self.rect.w
+
+                elif axis == "y":
+                    if movement.y < 0:
+                        self.precise_pos[1] = wall.bottom
+                    elif movement.y > 0:
+                        self.precise_pos[1] = wall.y - self.rect.h
+
+            self.set_rect_pos()
+
+    def update(self, active_inputs: set, screen_size: tuple, walls: list):
         """
         le mouvement est basé sur une somme de vecteurs,
         cela permet une gestion efficace de déplacements multidirectionnels
         notamment sur les diagonales
         """
         final_direction = pygame.math.Vector2(0, 0)
+        old_pos = self.precise_pos
 
         # Récupération des forces actives
         for key in self.directions.keys():
@@ -42,9 +65,12 @@ class Player(pygame.sprite.Sprite):
         if final_direction.xy != (0, 0):
             final_direction = final_direction.normalize()
 
-        # déplacement précis
+        # déplacement précis (séparation x/y pour les collisions)
         self.precise_pos[0] += final_direction.x * self.speed
+        self.collision(walls, final_direction, "x")
+
         self.precise_pos[1] += final_direction.y * self.speed
+        self.collision(walls, final_direction, "y")
 
         # empêcher le joueur de sortir de la carte
         # gauche
@@ -63,6 +89,4 @@ class Player(pygame.sprite.Sprite):
         elif self.precise_pos[1] + self.rect.height > screen_size[1]:
             self.precise_pos[1] = screen_size[1] - self.rect.height
 
-        # convertion en coordonnées entières
-        self.rect.topleft = (round(self.precise_pos[0]),
-                             round(self.precise_pos[1]))
+        self.set_rect_pos()

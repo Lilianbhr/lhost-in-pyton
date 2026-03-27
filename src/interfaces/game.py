@@ -23,7 +23,11 @@ class Game(Interface):
         self.map_manager.focus(self.player.rect.center)
 
     def update(self, inputs: set):
-        self.player.update(inputs, self.map_manager.get_map_size())
+        self.player.update(
+            inputs,
+            self.map_manager.get_map_size(),
+            self.map_manager.walls
+        )
 
         # Vérification qu'un portail à été franchi
         for portal in self.map_manager.portals:
