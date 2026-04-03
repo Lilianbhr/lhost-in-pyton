@@ -1,0 +1,1 @@
+Faiblesse et Forces par rapport à leur types :  V = Volcan (Type attaque : Feu); E = Eau (Type attaque : Aquatique); J = Jungle (Type attaque : Poison); A = Air (attaque : étourdissement/aveuglement).
