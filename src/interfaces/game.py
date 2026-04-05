@@ -1,14 +1,14 @@
 import pygame
-from src.interfaces.interface import Interface
-from src.graphics.mapManager import MapManager
-from src.graphics.sprite import Player
+from interfaces.interface import Interface
+from graphics.mapManager import MapManager
+from graphics.sprite import Player
 
 
 class Game(Interface):
     """
     Le gestionnaire de jeu, il contient la map, le joueur etc...
     """
-    def __init__(self, screen_size: tuple):
+    def __init__(self, screen_size: tuple[int, int]):
         super().__init__()
         self.nom = "game"
         self.screen_size = screen_size

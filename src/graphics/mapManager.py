@@ -4,7 +4,7 @@ import pygame
 
 
 class MapManager:
-    def __init__(self, screen_size: tuple):
+    def __init__(self, screen_size: tuple[int, int]):
         self.map_dir = "../assets/map/maps_tmx/"
         self.screen_size = screen_size
 
@@ -44,6 +44,7 @@ class MapManager:
                 self.walls.append(rect)
 
     def get_spawn_point(self):
+        # TODO: gérer le spawn dynamique pour lisser les transitions de map
         for obj in self.tmx_data.objects:
             if obj.name == "spawn_point":
                 return [obj.x, obj.y]
