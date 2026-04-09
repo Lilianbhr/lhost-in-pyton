@@ -1,22 +1,20 @@
-#class Joueur:
-    #def __init__(self, pseudo: str):
-        #self.pseudo = pseudo
 
 class Phaetons:
     def __init__(self,
                  nom: str,
-                 type: str,
+                 types: str,
                  niveau: int,
-                 sante, attaque1: str,
-                 attaque2: str,
-                 attaque3: str,
-                 parade1: str,
-                 parade2: str,
-                 parade3: str,
-                 ulti = str,
+                 sante : float,
+                 attaque1: str, #carte
+                 attaque2: str, #carte
+                 attaque3: str, #carte
+                 parade1: str, #carte
+                 parade2: str, #carte
+                 parade3: str, #carte
+                 ulti = str, #carte
                  evolution = bool):
         self.nom = nom
-        self.type = type
+        self.types = types
         self.niveau = niveau
         self.sante = sante
         self.attaque1 = attaque1
@@ -30,7 +28,7 @@ class Phaetons:
 
     def evoluer(self):
         """
-        fait évoluer le paheton
+        fait évoluer le paheton et applique les modification (à définir)
         """
         pass
 
@@ -53,7 +51,7 @@ class Carte:
 class Combat:
     def __init__(self, phaeton1: str,
                  phaeton2: str,
-                 slot: list,
+                 slot: list, # Correspond aux trois emplacements pour placer les attaques et ou parade ou ulti
                  attaque: list,
                  parade: list,
                  coups_speciaux: list,
