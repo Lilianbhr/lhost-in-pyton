@@ -24,7 +24,7 @@ class MapManager:
             size=self.screen_size,
             zoom=self.zoom
         )
-        group = pyscroll.PyscrollGroup(map_layer)
+        group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=4)
         return group
 
     def set_objects(self):
