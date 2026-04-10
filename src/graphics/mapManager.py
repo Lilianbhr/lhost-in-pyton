@@ -9,8 +9,8 @@ class MapManager:
         self.screen_size = screen_size
 
         self.tmx_data = None
-        self.zoom = 1.3
-        self.group = self.set_map("map_1")
+        self.zoom = 3
+        self.group = self.set_map("Level_0")
 
         self.portals = []
         self.walls = []
@@ -34,18 +34,18 @@ class MapManager:
         for obj in self.tmx_data.objects:
 
             # Portals
-            if obj.type == "portal":
+            if obj.type == "Portal":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.portals.append((rect, obj.name))
 
             # Walls
-            elif obj.type == "wall":
+            elif obj.type == "Wall":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 
     def get_spawn_point(self):
         for obj in self.tmx_data.objects:
-            if obj.name == "spawn_point":
+            if obj.name == "Spawn_point":
                 return [obj.x, obj.y]
         return 0, 0
 
