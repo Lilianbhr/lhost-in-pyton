@@ -20,7 +20,6 @@ while running:
 
         if event.type == pygame.QUIT:
             running = False
-
         elif event.type == pygame.KEYDOWN:
             key = pygame.key.name(event.key)
             mode.add_input(key)

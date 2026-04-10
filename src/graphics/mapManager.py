@@ -35,17 +35,16 @@ class MapManager:
         for obj in self.tmx_data.objects:
 
             # Portals
-            if obj.type == "portal":
+            if obj.type == "Portal":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.portals.append((rect, obj.name))
 
             # Walls
-            elif obj.type == "wall":
+            elif obj.type == "Wall":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 
     def get_spawn_point(self, src_map="main"):
-        # TODO: gérer le spawn dynamique pour lisser les transitions de map
         for obj in self.tmx_data.objects:
             if obj.type == "spawn_point" and obj.name == src_map:
                 return [obj.x, obj.y]
