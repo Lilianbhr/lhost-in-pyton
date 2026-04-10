@@ -4,13 +4,14 @@ import pygame
 
 
 class MapManager:
-    def __init__(self, screen_size: tuple):
+    def __init__(self, screen_size: tuple[int, int]):
         self.map_dir = "../assets/map/maps_tmx/"
+        self.map_name = "map_1"
         self.screen_size = screen_size
 
         self.tmx_data = None
         self.zoom = 1.3
-        self.group = self.set_map("map_1")
+        self.group = self.set_map(self.map_name)
 
         self.portals = []
         self.walls = []
@@ -43,9 +44,10 @@ class MapManager:
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 
-    def get_spawn_point(self):
+    def get_spawn_point(self, src_map="main"):
+        # TODO: gérer le spawn dynamique pour lisser les transitions de map
         for obj in self.tmx_data.objects:
-            if obj.name == "spawn_point":
+            if obj.type == "spawn_point" and obj.name == src_map:
                 return [obj.x, obj.y]
         return 0, 0
 

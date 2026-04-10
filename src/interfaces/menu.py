@@ -1,5 +1,5 @@
 import pygame
-from src.interfaces.interface import Interface
+from interfaces.interface import Interface
 
 
 class Menu(Interface):
