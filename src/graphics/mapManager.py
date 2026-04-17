@@ -10,7 +10,7 @@ class MapManager:
         self.screen_size = screen_size
 
         self.tmx_data = None
-        self.zoom = 1.3
+        self.zoom = 1.5
         self.group = self.set_map(self.map_name)
 
         self.portals = []
@@ -25,7 +25,7 @@ class MapManager:
             size=self.screen_size,
             zoom=self.zoom
         )
-        group = pyscroll.PyscrollGroup(map_layer)
+        group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=4)
         return group
 
     def set_objects(self):
@@ -35,12 +35,12 @@ class MapManager:
         for obj in self.tmx_data.objects:
 
             # Portals
-            if obj.type == "Portal":
+            if obj.type == "portal":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.portals.append((rect, obj.name))
 
             # Walls
-            elif obj.type == "Wall":
+            elif obj.type == "wall":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 
