@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f2b40a-8341-43a3-a802-486fd1d44a04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_0.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/mapManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/mapManager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_0.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_0.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_1.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_1.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_2.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_2.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_3.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_3.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_4.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_4.tmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics/sprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/sprite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Village__complet",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/madji/PycharmProjects/lhost-in-p/assets/map/maps_tmx"

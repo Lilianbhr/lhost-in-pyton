@@ -18,7 +18,7 @@ class Player(pygame.sprite.Sprite):
             "q": pygame.math.Vector2(-1, 0),
             "d": pygame.math.Vector2(1, 0)
         }
-        self.speed = 5
+        self.speed = 2.5
 
     def draw(self, screen: pygame.Surface):
         screen.blit(self.image, self.rect)

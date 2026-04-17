@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="7" nextobjectid="105">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="7" nextobjectid="108">
  <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="0" columns="5" objectalignment="topleft">
   <image source="../tilesets/TilesetField.png" width="80" height="240"/>
  </tileset>
@@ -119,7 +119,7 @@
 </data>
  </layer>
  <objectgroup id="6" name="Entities">
-  <object id="1" name="Level_2" type="Portal" x="232" y="96" width="32" height="32">
+  <object id="1" name="Level_2" type="Portal" x="232.726" y="80.0204" width="32" height="32">
    <properties>
     <property name="__anchorX" type="int" value="248"/>
     <property name="__anchorY" type="int" value="128"/>
@@ -143,7 +143,7 @@
     <property name="__cy" type="int" value="11"/>
    </properties>
   </object>
-  <object id="4" name="Level_3" type="Portal" x="156.529" y="252.377" width="32" height="32">
+  <object id="4" name="Level_3" type="Portal" x="159.434" y="251.651" width="32" height="32">
    <properties>
     <property name="__anchorX" type="int" value="168"/>
     <property name="__anchorY" type="int" value="288"/>
@@ -949,6 +949,30 @@
     <property name="__anchorY" type="int" value="80"/>
     <property name="__cx" type="int" value="15"/>
     <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="105" name="Level_2" type="Spawn_point" x="195.366" y="78.4247" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="106" name="Level_2" type="Spawn_point" x="210.619" y="225.146" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="107" name="Level_3" type="Spawn_point" x="161.954" y="207.714" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
    </properties>
   </object>
  </objectgroup>
