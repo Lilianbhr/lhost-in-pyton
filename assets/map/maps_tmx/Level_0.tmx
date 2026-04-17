@@ -119,7 +119,7 @@
 </data>
  </layer>
  <objectgroup id="6" name="Entities">
-  <object id="1" name="Level_2" type="Portal" x="232.726" y="80.0204" width="32" height="32">
+  <object id="1" name="Level_2" type="Portal" x="225.393" y="80.6871" width="32" height="32">
    <properties>
     <property name="__anchorX" type="int" value="248"/>
     <property name="__anchorY" type="int" value="128"/>
@@ -951,7 +951,7 @@
     <property name="__cy" type="int" value="5"/>
    </properties>
   </object>
-  <object id="105" name="Level_2" type="Spawn_point" x="195.366" y="78.4247" width="32" height="32">
+  <object id="105" name="Level_2" type="Spawn_point" x="183.545" y="79.151" width="32" height="32">
    <properties>
     <property name="__anchorX" type="int" value="248"/>
     <property name="__anchorY" type="int" value="128"/>

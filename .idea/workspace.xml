@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16f2b40a-8341-43a3-a802-486fd1d44a04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+    <list default="true" id="16f2b40a-8341-43a3-a802-486fd1d44a04" name="Changes" comment="Corrigé un bug de téléportation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_0.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_0.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_1.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_1.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_2.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_2.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_3.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_3.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/map/maps_tmx/Level_4.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map/maps_tmx/Level_4.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/sprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/sprite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +24,13 @@
     &quot;assignee&quot;: &quot;squaanchy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Lilianbhr/lhost-in-pyton.git&quot;,
-    &quot;accountId&quot;: &quot;af6424c1-9968-4132-b34e-f7a77bbc55c4&quot;
-  }
-}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Lilianbhr/lhost-in-pyton.git",
+    "accountId": "af6424c1-9968-4132-b34e-f7a77bbc55c4"
+  },
+  "editorReviewEnabled": false
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -45,20 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mapManager.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Village__complet&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/madji/PycharmProjects/lhost-in-p/assets/map/maps_tmx&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "Python.mapManager.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "#19 on Village__complet",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/madji/PycharmProjects/lhost-in-p/assets/map/maps_tmx"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\madji\PycharmProjects\lhost-in-p\assets\map\maps_tmx" />
@@ -104,6 +98,19 @@
       <option name="presentableId" value="Default" />
       <updated>1776423264854</updated>
     </task>
+    <task id="LOCAL-00001" summary="Corrigé un bug de téléportation">
+      <option name="closed" value="true" />
+      <created>1776425258200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776425258200</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Corrigé un bug de téléportation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigé un bug de téléportation" />
   </component>
 </project>
