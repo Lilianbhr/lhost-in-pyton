@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="13">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="14">
  <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="0" columns="5" objectalignment="topleft">
   <image source="../tilesets/TilesetField.png" width="80" height="240"/>
  </tileset>
@@ -172,6 +172,14 @@
    </properties>
   </object>
   <object id="12" name="Level_1" type="Spawn_point" x="196.092" y="98.7624" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="-8"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="13" name="Level_1" type="Spawn_point" x="191.734" y="2.1586" width="32" height="32">
    <properties>
     <property name="__anchorX" type="int" value="-8"/>
     <property name="__anchorY" type="int" value="128"/>

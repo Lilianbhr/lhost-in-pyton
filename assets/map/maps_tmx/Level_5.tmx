@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="5">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="8">
  <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="0" columns="5" objectalignment="topleft">
   <image source="../tilesets/TilesetField.png" width="80" height="240"/>
  </tileset>
@@ -115,7 +115,7 @@
     <property name="__cy" type="int" value="0"/>
    </properties>
   </object>
-  <object id="3" name="Level_4" type="Portal" x="-8" y="96" width="22.5575" height="45.8005">
+  <object id="3" name="Level_4" type="Spawn_point" x="24.6855" y="92.821" width="22.5575" height="45.8005">
    <properties>
     <property name="__anchorX" type="int" value="8"/>
     <property name="__anchorY" type="int" value="128"/>
@@ -128,6 +128,30 @@
     <property name="__anchorX" type="int" value="120"/>
     <property name="__anchorY" type="int" value="128"/>
     <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="5" name="Level_1" type="Spawn_point" x="-0.0204426" y="17.4118" width="47.9796" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="24"/>
+    <property name="__anchorY" type="int" value="16"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="6" name="Level_1" type="Spawn_point" x="208.44" y="23.2226" width="47.9796" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="24"/>
+    <property name="__anchorY" type="int" value="16"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="7" name="Level_4" type="Portal" x="-1.83628" y="91.1358" width="22.5575" height="45.8005">
+   <properties>
+    <property name="__anchorX" type="int" value="8"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="0"/>
     <property name="__cy" type="int" value="7"/>
    </properties>
   </object>

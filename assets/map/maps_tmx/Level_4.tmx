@@ -99,7 +99,7 @@
 </data>
  </layer>
  <objectgroup id="5" name="Entities">
-  <object id="1" name="Level_3" type="Spawn_point" x="21.0538" y="224" width="32" height="32">
+  <object id="1" name="Level_3" type="Spawn_point" x="21.7801" y="221.095" width="32" height="32">
    <properties>
     <property name="__anchorX" type="int" value="8"/>
     <property name="__anchorY" type="int" value="256"/>

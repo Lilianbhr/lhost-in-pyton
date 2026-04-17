@@ -163,7 +163,7 @@
     <property name="__cy" type="int" value="17"/>
    </properties>
   </object>
-  <object id="9" name="Level_5" type="Spawn_point" x="204.809" y="214.614" width="47.9796" height="13.8414">
+  <object id="9" name="Level_5" type="Spawn_point" x="206.988" y="224.056" width="47.9796" height="13.8414">
    <properties>
     <property name="__anchorX" type="int" value="24"/>
     <property name="__anchorY" type="int" value="288"/>
