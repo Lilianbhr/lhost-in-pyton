@@ -29,7 +29,7 @@ class Game(Interface):
             self.map_manager.walls
         )
 
-        # Vérification qu'un portail à été franchi
+        # Vérification qu'un portail a été franchi
         for portal in self.map_manager.portals:
             if self.player.rect.colliderect(portal[0]):
                 self.map_manager.change_map(portal[1])

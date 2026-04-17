@@ -2,7 +2,7 @@ import pygame
 
 
 class Player(pygame.sprite.Sprite):
-    """ Première version d'un personnage ocntrollable par le joueur """
+    """ Première version d'un personnage contrôlable par le joueur """
     def __init__(self):
         super().__init__()
 
@@ -19,7 +19,6 @@ class Player(pygame.sprite.Sprite):
             "d": pygame.math.Vector2(1, 0)
         }
         self.speed = 5
-        self.precise_pos = [0, 0]
 
     def draw(self, screen: pygame.Surface):
         screen.blit(self.image, self.rect)

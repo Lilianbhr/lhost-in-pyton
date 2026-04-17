@@ -10,7 +10,7 @@ class MapManager:
         self.screen_size = screen_size
 
         self.tmx_data = None
-        self.zoom = 1.3
+        self.zoom = 1.5
         self.group = self.set_map(self.map_name)
 
         self.portals = []
@@ -25,7 +25,7 @@ class MapManager:
             size=self.screen_size,
             zoom=self.zoom
         )
-        group = pyscroll.PyscrollGroup(map_layer)
+        group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=4)
         return group
 
     def set_objects(self):
@@ -45,7 +45,6 @@ class MapManager:
                 self.walls.append(rect)
 
     def get_spawn_point(self, src_map="main"):
-        # TODO: gérer le spawn dynamique pour lisser les transitions de map
         for obj in self.tmx_data.objects:
             if obj.type == "spawn_point" and obj.name == src_map:
                 return [obj.x, obj.y]
