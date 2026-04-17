@@ -34,18 +34,30 @@ class Phaetons:
 
 
 class Carte:
-    def __init__(self,nom, mouvement, degats, parade, degat_ulti):
+    def __init__(self,
+                 nom: str,
+                 est_parade:bool,
+                 est_attaque:bool,
+                 est_ulti:bool,
+                 degats: float,
+                 parade: float,
+                 degat_ulti: float,):
         self.nom = nom
-        self.mouvement = mouvement
         self.degats = degats
         self.parade = parade
         self.degat_ulti = degat_ulti
+        self.est_parade = est_parade
+        self.est_attaque = est_attaque
+        self.est_ulti = est_ulti
+        self.est_verouille = False
 
-    def infliger_degats(self, adversaire):
-        adversaire.sante -= self.degats
 
-    def parer(self, adversaire):
-        adversaire.degats -= self.parade
+    def verouiller(self):
+        """
+        verouille une carte plus utilisable
+        """
+        self.est_verouille = True
+        return self.est_verouille
 
 
 class Combat:
@@ -67,11 +79,13 @@ class Combat:
         self.coups_speciaux = coups_speciaux
         self.boost_attaque = boost_attaque
         self.nb_attaque = nb_attaque
-        self.nb_attaque = 0
+        self.nb_attaque = 0 # Le nombre d'attaque placées
         self.nb_parade = nb_parade
         self.nb_parade = 0
         self.nb_spe = nb_spe
         self.nb_spe = 0
+        self.est_valide = False #Bouton pour valider le slot
+
 
     def placer_attaque1(self):
         """
@@ -151,9 +165,63 @@ class Combat:
             self.slot.append(self.coups_speciaux[2])
             self.nb_spe += 1
 
+    def valider_slot(self):
+        """
+        Bouton qui permet de valider le slot. Il faut que les deux joueurs valide pour lancer la phase de combat
+        """
+        self.est_valide = True
+        return self.est_valide
 
-    def confirmer_slot(self):
+    def attaquer(self, Joueur1, Joueur2):
         """
-        confirme et lance les cartes dans le slot
+        Effectue toutes les actions des cartes dasn les slots (attaques, parades et ulti)
         """
-        pass
+
+        for i in self.slot:
+
+            if Joueur1.slot[i].est_attaque and Joueur2.slot[i].est_attaque or\
+                    Joueur1.slot[i].est_ulti and Joueur2.slot[i].est_ulti or\
+                    Joueur1.slot[i].est_ulti and Joueur2.slot[i].est_attaque or\
+                    Joueur1.slot[i].est_attaque and Joueur2.slot[i].est_ulti:
+
+                Joueur1.sante -= Joueur1.slot[0].degats
+                Joueur2.sante -= Joueur2.slot[0].degats
+
+            elif Joueur1.slot[i].est_attaque and Joueur2.slot[i].est_parade :
+                if Joueur2.slot[i].parade < Joueur1.slot[i].attaque:
+                    Joueur1.sante -= Joueur1.slot[i].degats - Joueur2.slot[0].parade
+
+            elif Joueur2.slot[i].est_attaque and Joueur1.slot[i].est_parade :
+                if Joueur1.slot[i].parade < Joueur2.slot[i].attaque:
+                    Joueur2.sante -= Joueur2.slot[i].degats - Joueur1.slot[0].parade
+
+            elif Joueur1.slot[i].est_ulti and Joueur2.slot[i].est_parade :
+                Joueur2.sante -= Joueur1.slot[i].degats_ulti
+
+            elif Joueur2.slot[i].est_ulti and Joueur1.slot[i].est_parade :
+                Joueur1.sante -= Joueur2.slot[i].degats_ulti
+
+
+    def lancer_combat(self, Joueur1, Joueur2):
+        """
+        vérifie si les slots sont validé et lance le combat
+        """
+        if Joueur1.valider_solt() and Joueur2.valider_solt():
+            self.attaquer(self, Joueur1, Joueur2)
+
+
+
+
+zoizo_blanc = Phaetons("zoizo_blanc", "feu", 1, 50,
+                       "coup de bec", "coup de griffe brulante", "regard perçant",
+                       "bouclier de feu", "plumes de métal", "coque imbrisable",
+                       "Mega boum", False)
+
+zoiso_de_vierge = Phaetons("zoiso_de_vierge", "feu", 1, 50, "saint kroassement",
+                           "Paax", "Chog", "saint croisement", "saint croissant",
+                           "Hectarr", "Lars", False)
+
+coup_de_bec = Carte("coup_de_bec", False, True, False,
+                    8, 0, 0,)
+coup_de_griffe_brulante = Carte("coup_de_griffe_brulante", False, True,False,
+                                12, 0, 0,)
