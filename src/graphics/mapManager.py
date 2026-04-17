@@ -37,16 +37,16 @@ class MapManager:
             # Portals
             if obj.type == "portal":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
-                self.portals.append((rect, obj.name))
+                self.portals.append((rect, obj.name, obj.link))
 
             # Walls
             elif obj.type == "wall":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 
-    def get_spawn_point(self, src_map="main"):
+    def get_spawn_point(self, src_map="main", link=0):
         for obj in self.tmx_data.objects:
-            if obj.type == "spawn_point" and obj.name == src_map:
+            if obj.type == "spawn_point" and obj.name == src_map and obj.link == link:
                 return [obj.x, obj.y]
         return 0, 0
 
