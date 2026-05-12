@@ -6,11 +6,11 @@ import pygame
 class MapManager:
     def __init__(self, screen_size: tuple[int, int]):
         self.map_dir = "../assets/map/maps_tmx/"
-        self.map_name = "map_1"
+        self.map_name = "Level_0"
         self.screen_size = screen_size
 
         self.tmx_data = None
-        self.zoom = 1.5
+        self.zoom = 2.5
         self.group = self.set_map(self.map_name)
 
         self.portals = []
@@ -35,12 +35,12 @@ class MapManager:
         for obj in self.tmx_data.objects:
 
             # Portals
-            if obj.type == "portal":
+            if obj.type == "Portal":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.portals.append((rect, obj.name, obj.link))
 
             # Walls
-            elif obj.type == "wall":
+            elif obj.type == "Wall":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="10">
+ <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="0" columns="5" objectalignment="topleft">
+  <image source="../tilesets/TilesetField.png" width="80" height="240"/>
+ </tileset>
+ <tileset firstgid="1" name="TilesetFloor" tilewidth="16" tileheight="16" tilecount="0" columns="22" objectalignment="topleft">
+  <image source="../tilesets/TilesetFloor.png" width="352" height="417"/>
+ </tileset>
+ <tileset firstgid="266" name="TilesetVillageAbandoned" tilewidth="16" tileheight="16" tilecount="0" columns="20" objectalignment="topleft">
+  <image source="../tilesets/TilesetVillageAbandoned.png" width="320" height="192"/>
+ </tileset>
+ <tileset firstgid="266" name="TilesetHouse" tilewidth="16" tileheight="16" tilecount="0" columns="33" objectalignment="topleft">
+  <image source="../tilesets/TilesetHouse.png" width="528" height="368"/>
+ </tileset>
+ <tileset firstgid="962" name="TilesetWater" tilewidth="16" tileheight="16" tilecount="0" columns="28" objectalignment="topleft">
+  <image source="../tilesets/TilesetWater.png" width="448" height="272"/>
+ </tileset>
+ <tileset firstgid="1428" name="TilesetNature" tilewidth="16" tileheight="16" tilecount="0" columns="24" objectalignment="topleft">
+  <image source="../tilesets/TilesetNature.png" width="384" height="336"/>
+ </tileset>
+ <layer id="1" name="Floor" width="16" height="16">
+  <data encoding="csv">
+156,156,156,156,156,156,156,156,156,156,156,156,156,156,156,157,
+178,178,178,178,178,178,178,178,178,178,178,178,178,178,178,179,
+200,200,200,200,200,200,178,178,178,200,200,200,200,200,200,201,
+265,265,265,265,265,265,177,178,179,265,265,265,265,265,265,265,
+265,265,265,265,265,265,177,178,179,265,265,265,265,265,265,265,
+265,265,265,265,265,265,177,178,179,265,265,265,265,265,265,265,
+156,156,156,156,156,156,178,178,178,156,156,156,156,156,156,157,
+178,178,178,178,178,178,178,178,178,178,178,178,178,178,178,179,
+178,178,178,200,200,200,200,200,200,200,200,200,200,178,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
+177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179
+</data>
+ </layer>
+ <layer id="2" name="Water" width="16" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1427,0,0,0,0,
+0,0,0,0,1427,1427,1427,1427,1427,1427,1427,1427,0,0,0,0,
+0,0,0,0,1427,1427,0,0,0,0,1427,1427,0,0,0,0,
+0,0,0,0,1427,1427,0,0,0,0,1427,1427,0,0,0,0,
+0,0,0,0,1427,1427,0,0,0,0,1427,1427,0,0,0,0,
+0,0,0,0,1427,0,0,0,0,0,1427,1427,0,0,0,0,
+0,0,0,0,1427,0,0,0,0,0,0,1427,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Trees" width="16" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1863,1864,1865,1863,1864,1865,0,0,0,1923,1863,1864,1865,1863,1864,1865,
+1887,1888,1889,1887,1888,1889,0,0,0,1677,1887,1888,1889,1887,1888,1889,
+1677,1912,1677,1677,1912,1654,0,0,0,1677,1677,1912,1677,1677,1912,1677,
+1853,1677,1677,1854,1677,1677,0,0,0,1676,1677,1677,1677,1677,1677,1677,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,1428,1429,1677,1677,1677,1677,1677,1677,1428,1429,0,0,0,
+0,0,0,1452,1453,1677,1677,1677,1677,1677,1677,1452,1453,0,0,0,
+0,0,0,1428,1429,1677,1677,1677,1677,1677,1677,1428,1429,0,0,0,
+0,0,0,1452,1453,1677,1677,1677,1677,1677,1677,1452,1453,0,0,0,
+0,0,0,1428,1429,1677,1677,1677,1677,1677,1677,1428,1429,0,0,0,
+0,0,0,1452,1453,1677,1677,1677,1677,1677,1677,1452,1453,0,0,0,
+0,0,0,1428,1429,1428,1429,1428,1429,1428,1429,1428,1429,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="House" width="16" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,504,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,894,895,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,927,928,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,960,961,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="Entities">
+  <object id="1" name="Level_5" type="Portal" x="0.0102142" y="240.747" width="47.9796" height="13.8414">
+   <properties>
+    <property name="__anchorX" type="int" value="24"/>
+    <property name="__anchorY" type="int" value="288"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="17"/>
+   </properties>
+  </object>
+  <object id="2" name="Level_5" type="Portal" x="205.105" y="240.747" width="49.4323" height="13.1151">
+   <properties>
+    <property name="__anchorX" type="int" value="232"/>
+    <property name="__anchorY" type="int" value="288"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="17"/>
+   </properties>
+  </object>
+  <object id="3" name="Level_2" type="Portal" x="-2.91559" y="95.2737" width="13.1151" height="45.8005">
+   <properties>
+    <property name="__anchorX" type="int" value="8"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="4" name="Level_2" type="Spawn_point" x="18.8543" y="102.415" width="15.2941" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="-8"/>
+    <property name="__anchorY" type="int" value="32"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="5" name="Spawn_point" type="Spawn_point" x="104" y="96" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="120"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="6" name="Level_2" type="Portal" x="-1.8363" y="-1.47312" width="15.2941" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="-8"/>
+    <property name="__anchorY" type="int" value="32"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="7" name="Level_2" type="Spawn_point" x="20.6804" y="-2.19946" width="15.2941" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="-8"/>
+    <property name="__anchorY" type="int" value="32"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="8" name="Level_5" type="Spawn_point" x="0.705902" y="218.246" width="47.9796" height="13.8414">
+   <properties>
+    <property name="__anchorX" type="int" value="24"/>
+    <property name="__anchorY" type="int" value="288"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="17"/>
+   </properties>
+  </object>
+  <object id="9" name="Level_5" type="Spawn_point" x="206.988" y="224.056" width="47.9796" height="13.8414">
+   <properties>
+    <property name="__anchorX" type="int" value="24"/>
+    <property name="__anchorY" type="int" value="288"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="17"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
