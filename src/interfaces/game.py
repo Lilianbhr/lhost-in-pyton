@@ -34,7 +34,8 @@ class Game(Interface):
             if self.player.rect.colliderect(portal[0]):
                 self.map_manager.change_map(portal[1])
                 self.player.rect.topleft = self.map_manager.get_spawn_point(
-                    self.map_manager.map_name
+                    self.map_manager.map_name,
+                    link=portal[2]
                 )
                 self.map_manager.map_name = portal[1]
                 self.map_manager.group.add(self.player)
