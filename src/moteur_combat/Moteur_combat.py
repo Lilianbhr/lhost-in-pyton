@@ -1,6 +1,7 @@
 
 class Phaetons:
     def __init__(self,
+
                  nom: str,
                  types: str,
                  niveau: int,
@@ -13,6 +14,7 @@ class Phaetons:
                  parade3: str, #carte
                  ulti = str, #carte
                  evolution = bool):
+
         self.nom = nom
         self.types = types
         self.niveau = niveau
@@ -35,6 +37,7 @@ class Phaetons:
 
 class Carte:
     def __init__(self,
+
                  nom: str,
                  est_parade:bool,
                  est_attaque:bool,
@@ -42,6 +45,7 @@ class Carte:
                  degats: float,
                  parade: float,
                  degat_ulti: float,):
+
         self.nom = nom
         self.degats = degats
         self.parade = parade
@@ -54,23 +58,23 @@ class Carte:
 
     def verouiller(self):
         """
-        verouille une carte plus utilisable
+        verouille une carte qui n'est plus utilisable
         """
         self.est_verouille = True
         return self.est_verouille
 
 
 class Combat:
-    def __init__(self, phaeton1: str,
+    def __init__(self,
+
+                 phaeton1: str,
                  phaeton2: str,
-                 slot: list, # Correspond aux trois emplacements pour placer les attaques et ou parade ou ulti
-                 attaque: list,
-                 parade: list,
-                 coups_speciaux: list,
-                 boost_attaque: float,
-                 nb_attaque: int,
-                 nb_parade: int,
-                 nb_spe: int):
+                 slot: list, # Correspond aux trois emplacements vide pour placer les attaques et ou parade ou ulti
+                 attaque: list, # La liste des trois cartes d'attaque que le joueur peut placer dans le slot
+                 parade: list, # idem pour les parades
+                 coups_speciaux: list, # idem pour les coups speciaux
+                 boost_attaque: float):
+
         self.phaetton1 = phaeton1
         self.phaeton2 = phaeton2
         self.slot = slot
@@ -78,13 +82,10 @@ class Combat:
         self.parade = parade
         self.coups_speciaux = coups_speciaux
         self.boost_attaque = boost_attaque
-        self.nb_attaque = nb_attaque
-        self.nb_attaque = 0 # Le nombre d'attaque placées
-        self.nb_parade = nb_parade
-        self.nb_parade = 0
-        self.nb_spe = nb_spe
-        self.nb_spe = 0
-        self.est_valide = False #Bouton pour valider le slot
+        self.nb_attaque = 0 # nombre de cartes d'attaque dans le slot
+        self.nb_parade = 0 # nombre de cartes de parade dans le slot
+        self.nb_spe = 0 # nombre de cartes de spe dans le slot (=coups speciaux)
+        self.est_valide = False # bouton pour valider le slot
 
 
     def placer_attaque1(self):
@@ -95,7 +96,7 @@ class Combat:
             self.slot.append(self.attaque[0])
             self.nb_attaque += 1
         else:
-            print("seulement 2 cartes de ce type")
+            print("seulement 2 cartes de ce type sont autorisés au maximum")
 
     def placer_attaque2(self):
         """
@@ -105,7 +106,7 @@ class Combat:
             self.slot.append(self.attaque[1])
             self.nb_attaque += 1
         else:
-            print("seulement 2 cartes de ce type")
+            print("seulement 2 cartes de ce type sont autorisés au maximum")
 
     def placer_attaque3(self):
         """
@@ -115,7 +116,7 @@ class Combat:
             self.slot.append(self.attaque[2])
             self.nb_attaque += 1
         else:
-            print("seulement 2 cartes de ce type")
+            print("seulement 2 cartes de ce type sont autorisés au maximum")
 
     def placer_parade1(self):
         """
@@ -172,56 +173,40 @@ class Combat:
         self.est_valide = True
         return self.est_valide
 
-    def attaquer(self, Joueur1, Joueur2):
+    @staticmethod
+    def attaquer(joueur1, joueur2):
         """
-        Effectue toutes les actions des cartes dasn les slots (attaques, parades et ulti)
+        Effectue toutes les actions des cartes dans les slots (attaques, parades et ulti)
         """
 
-        for i in self.slot:
+        for i in joueur1.slot:
 
-            if Joueur1.slot[i].est_attaque and Joueur2.slot[i].est_attaque or\
-                    Joueur1.slot[i].est_ulti and Joueur2.slot[i].est_ulti or\
-                    Joueur1.slot[i].est_ulti and Joueur2.slot[i].est_attaque or\
-                    Joueur1.slot[i].est_attaque and Joueur2.slot[i].est_ulti:
+            if joueur1.slot[i].est_attaque and joueur2.slot[i].est_attaque or\
+                    joueur1.slot[i].est_ulti and joueur2.slot[i].est_ulti or\
+                    joueur1.slot[i].est_ulti and joueur2.slot[i].est_attaque or\
+                    joueur1.slot[i].est_attaque and joueur2.slot[i].est_ulti:
 
-                Joueur1.sante -= Joueur1.slot[0].degats
-                Joueur2.sante -= Joueur2.slot[0].degats
+                joueur1.sante -= joueur2.slot[i].degats
+                joueur2.sante -= joueur1.slot[i].degats
 
-            elif Joueur1.slot[i].est_attaque and Joueur2.slot[i].est_parade :
-                if Joueur2.slot[i].parade < Joueur1.slot[i].attaque:
-                    Joueur1.sante -= Joueur1.slot[i].degats - Joueur2.slot[0].parade
+            elif joueur1.slot[i].est_attaque and joueur2.slot[i].est_parade :
+                if joueur2.slot[i].parade < joueur1.slot[i].degats:
+                    joueur2.sante -= joueur1.slot[i].degats - joueur2.slot[i].parade
 
-            elif Joueur2.slot[i].est_attaque and Joueur1.slot[i].est_parade :
-                if Joueur1.slot[i].parade < Joueur2.slot[i].attaque:
-                    Joueur2.sante -= Joueur2.slot[i].degats - Joueur1.slot[0].parade
+            elif joueur2.slot[i].est_attaque and joueur1.slot[i].est_parade :
+                if joueur1.slot[i].parade < joueur2.slot[i].attaque:
+                    joueur1.sante -= joueur2.slot[i].degats - joueur1.slot[i].parade
 
-            elif Joueur1.slot[i].est_ulti and Joueur2.slot[i].est_parade :
-                Joueur2.sante -= Joueur1.slot[i].degats_ulti
+            elif joueur1.slot[i].est_ulti and joueur2.slot[i].est_parade :
+                joueur2.sante -= joueur1.slot[i].degats_ulti
 
-            elif Joueur2.slot[i].est_ulti and Joueur1.slot[i].est_parade :
-                Joueur1.sante -= Joueur2.slot[i].degats_ulti
+            elif joueur2.slot[i].est_ulti and joueur1.slot[i].est_parade :
+                joueur1.sante -= joueur2.slot[i].degats_ulti
 
 
-    def lancer_combat(self, Joueur1, Joueur2):
+    def lancer_combat(self, joueur1, joueur2):
         """
         vérifie si les slots sont validé et lance le combat
         """
-        if Joueur1.valider_solt() and Joueur2.valider_solt():
-            self.attaquer(self, Joueur1, Joueur2)
-
-
-
-
-zoizo_blanc = Phaetons("zoizo_blanc", "feu", 1, 50,
-                       "coup de bec", "coup de griffe brulante", "regard perçant",
-                       "bouclier de feu", "plumes de métal", "coque imbrisable",
-                       "Mega boum", False)
-
-zoiso_de_vierge = Phaetons("zoiso_de_vierge", "feu", 1, 50, "saint kroassement",
-                           "Paax", "Chog", "saint croisement", "saint croissant",
-                           "Hectarr", "Lars", False)
-
-coup_de_bec = Carte("coup_de_bec", False, True, False,
-                    8, 0, 0,)
-coup_de_griffe_brulante = Carte("coup_de_griffe_brulante", False, True,False,
-                                12, 0, 0,)
+        if joueur1.valider_solt() and joueur2.valider_solt():
+            self.attaquer(joueur1, joueur2)
