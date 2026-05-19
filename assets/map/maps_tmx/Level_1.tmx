@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="10">
- <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="0" columns="5" objectalignment="topleft">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="6" nextobjectid="10">
+ <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="75" columns="5" objectalignment="topleft">
   <image source="../tilesets/TilesetField.png" width="80" height="240"/>
  </tileset>
- <tileset firstgid="1" name="TilesetFloor" tilewidth="16" tileheight="16" tilecount="0" columns="22" objectalignment="topleft">
+ <tileset firstgid="76" name="TilesetFloor" tilewidth="16" tileheight="16" tilecount="572" columns="22" objectalignment="topleft">
   <image source="../tilesets/TilesetFloor.png" width="352" height="417"/>
  </tileset>
- <tileset firstgid="266" name="TilesetVillageAbandoned" tilewidth="16" tileheight="16" tilecount="0" columns="20" objectalignment="topleft">
+ <tileset firstgid="648" name="TilesetVillageAbandoned" tilewidth="16" tileheight="16" tilecount="240" columns="20" objectalignment="topleft">
   <image source="../tilesets/TilesetVillageAbandoned.png" width="320" height="192"/>
  </tileset>
- <tileset firstgid="266" name="TilesetHouse" tilewidth="16" tileheight="16" tilecount="0" columns="33" objectalignment="topleft">
+ <tileset firstgid="888" name="TilesetHouse" tilewidth="16" tileheight="16" tilecount="759" columns="33" objectalignment="topleft">
   <image source="../tilesets/TilesetHouse.png" width="528" height="368"/>
  </tileset>
- <tileset firstgid="962" name="TilesetWater" tilewidth="16" tileheight="16" tilecount="0" columns="28" objectalignment="topleft">
+ <tileset firstgid="1647" name="TilesetWater" tilewidth="16" tileheight="16" tilecount="476" columns="28" objectalignment="topleft">
   <image source="../tilesets/TilesetWater.png" width="448" height="272"/>
  </tileset>
- <tileset firstgid="1428" name="TilesetNature" tilewidth="16" tileheight="16" tilecount="0" columns="24" objectalignment="topleft">
+ <tileset firstgid="2123" name="TilesetNature" tilewidth="16" tileheight="16" tilecount="504" columns="24" objectalignment="topleft">
   <image source="../tilesets/TilesetNature.png" width="384" height="336"/>
  </tileset>
  <layer id="1" name="Floor" width="16" height="16">
   <data encoding="csv">
-156,156,156,156,156,156,156,156,156,156,156,156,156,156,156,157,
-178,178,178,178,178,178,178,178,178,178,178,178,178,178,178,179,
-200,200,200,200,200,200,178,178,178,200,200,200,200,200,200,201,
-265,265,265,265,265,265,177,178,179,265,265,265,265,265,265,265,
-265,265,265,265,265,265,177,178,179,265,265,265,265,265,265,265,
-265,265,265,265,265,265,177,178,179,265,265,265,265,265,265,265,
-156,156,156,156,156,156,178,178,178,156,156,156,156,156,156,157,
-178,178,178,178,178,178,178,178,178,178,178,178,178,178,178,179,
-178,178,178,200,200,200,200,200,200,200,200,200,200,178,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179,
-177,178,179,265,265,265,265,265,265,265,265,265,265,177,178,179
+231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,232,
+253,253,253,253,253,253,253,253,253,253,253,253,253,253,253,254,
+275,275,275,275,275,275,253,253,253,275,275,275,275,275,275,276,
+340,340,340,340,340,340,252,253,254,340,340,340,340,340,340,340,
+340,340,340,340,340,340,252,253,254,340,340,340,340,340,340,340,
+340,340,340,340,340,340,252,253,254,340,340,340,340,340,340,340,
+231,231,231,231,231,231,253,253,253,231,231,231,231,231,231,232,
+253,253,253,253,253,253,253,253,253,253,253,253,253,253,253,254,
+253,253,253,275,275,275,275,275,275,275,275,275,275,253,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254,
+252,253,254,340,340,340,340,340,340,340,340,340,340,252,253,254
 </data>
  </layer>
  <layer id="2" name="Water" width="16" height="16">
@@ -49,33 +49,33 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,1427,0,0,0,0,
-0,0,0,0,1427,1427,1427,1427,1427,1427,1427,1427,0,0,0,0,
-0,0,0,0,1427,1427,0,0,0,0,1427,1427,0,0,0,0,
-0,0,0,0,1427,1427,0,0,0,0,1427,1427,0,0,0,0,
-0,0,0,0,1427,1427,0,0,0,0,1427,1427,0,0,0,0,
-0,0,0,0,1427,0,0,0,0,0,1427,1427,0,0,0,0,
-0,0,0,0,1427,0,0,0,0,0,0,1427,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,2112,0,0,0,0,
+0,0,0,0,2112,2112,2112,2112,2112,2112,2112,2112,0,0,0,0,
+0,0,0,0,2112,2112,0,0,0,0,2112,2112,0,0,0,0,
+0,0,0,0,2112,2112,0,0,0,0,2112,2112,0,0,0,0,
+0,0,0,0,2112,2112,0,0,0,0,2112,2112,0,0,0,0,
+0,0,0,0,2112,0,0,0,0,0,2112,2112,0,0,0,0,
+0,0,0,0,2112,0,0,0,0,0,0,2112,0,0,0,0
 </data>
  </layer>
  <layer id="3" name="Trees" width="16" height="16">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-1863,1864,1865,1863,1864,1865,0,0,0,1923,1863,1864,1865,1863,1864,1865,
-1887,1888,1889,1887,1888,1889,0,0,0,1677,1887,1888,1889,1887,1888,1889,
-1677,1912,1677,1677,1912,1654,0,0,0,1677,1677,1912,1677,1677,1912,1677,
-1853,1677,1677,1854,1677,1677,0,0,0,1676,1677,1677,1677,1677,1677,1677,
+2558,2559,2560,2558,2559,2560,0,0,0,2618,2558,2559,2560,2558,2559,2560,
+2582,2583,2584,2582,2583,2584,0,0,0,2372,2582,2583,2584,2582,2583,2584,
+2372,2607,2372,2372,2607,2349,0,0,0,2372,2372,2607,2372,2372,2607,2372,
+2548,2372,2372,2549,2372,2372,0,0,0,2371,2372,2372,2372,2372,2372,2372,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,1428,1429,1677,1677,1677,1677,1677,1677,1428,1429,0,0,0,
-0,0,0,1452,1453,1677,1677,1677,1677,1677,1677,1452,1453,0,0,0,
-0,0,0,1428,1429,1677,1677,1677,1677,1677,1677,1428,1429,0,0,0,
-0,0,0,1452,1453,1677,1677,1677,1677,1677,1677,1452,1453,0,0,0,
-0,0,0,1428,1429,1677,1677,1677,1677,1677,1677,1428,1429,0,0,0,
-0,0,0,1452,1453,1677,1677,1677,1677,1677,1677,1452,1453,0,0,0,
-0,0,0,1428,1429,1428,1429,1428,1429,1428,1429,1428,1429,0,0,0
+0,0,0,2123,2124,2372,2372,2372,2372,2372,2372,2123,2124,0,0,0,
+0,0,0,2147,2148,2372,2372,2372,2372,2372,2372,2147,2148,0,0,0,
+0,0,0,2123,2124,2372,2372,2372,2372,2372,2372,2123,2124,0,0,0,
+0,0,0,2147,2148,2372,2372,2372,2372,2372,2372,2147,2148,0,0,0,
+0,0,0,2123,2124,2372,2372,2372,2372,2372,2372,2123,2124,0,0,0,
+0,0,0,2147,2148,2372,2372,2372,2372,2372,2372,2147,2148,0,0,0,
+0,0,0,2123,2124,2123,2124,2123,2124,2123,2124,2123,2124,0,0,0
 </data>
  </layer>
  <layer id="4" name="House" width="16" height="16">
@@ -89,11 +89,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,504,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,1126,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,894,895,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,927,928,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,960,961,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1516,1517,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1549,1550,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1582,1583,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -105,6 +105,7 @@
     <property name="__anchorY" type="int" value="288"/>
     <property name="__cx" type="int" value="1"/>
     <property name="__cy" type="int" value="17"/>
+    <property name="link" type="int" value="1"/>
    </properties>
   </object>
   <object id="2" name="Level_5" type="Portal" x="205.105" y="240.747" width="49.4323" height="13.1151">
@@ -113,6 +114,7 @@
     <property name="__anchorY" type="int" value="288"/>
     <property name="__cx" type="int" value="14"/>
     <property name="__cy" type="int" value="17"/>
+    <property name="link" type="int" value="2"/>
    </properties>
   </object>
   <object id="3" name="Level_2" type="Portal" x="-2.91559" y="95.2737" width="13.1151" height="45.8005">
@@ -121,6 +123,7 @@
     <property name="__anchorY" type="int" value="128"/>
     <property name="__cx" type="int" value="0"/>
     <property name="__cy" type="int" value="7"/>
+    <property name="link" type="int" value="2"/>
    </properties>
   </object>
   <object id="4" name="Level_2" type="Spawn_point" x="18.8543" y="102.415" width="15.2941" height="32">
@@ -129,6 +132,7 @@
     <property name="__anchorY" type="int" value="32"/>
     <property name="__cx" type="int" value="0"/>
     <property name="__cy" type="int" value="1"/>
+    <property name="link" type="int" value="2"/>
    </properties>
   </object>
   <object id="5" name="Spawn_point" type="Spawn_point" x="104" y="96" width="32" height="32">
@@ -145,6 +149,7 @@
     <property name="__anchorY" type="int" value="32"/>
     <property name="__cx" type="int" value="0"/>
     <property name="__cy" type="int" value="1"/>
+    <property name="link" type="int" value="1"/>
    </properties>
   </object>
   <object id="7" name="Level_2" type="Spawn_point" x="20.6804" y="-2.19946" width="15.2941" height="32">
@@ -153,6 +158,7 @@
     <property name="__anchorY" type="int" value="32"/>
     <property name="__cx" type="int" value="0"/>
     <property name="__cy" type="int" value="1"/>
+    <property name="link" type="int" value="1"/>
    </properties>
   </object>
   <object id="8" name="Level_5" type="Spawn_point" x="0.705902" y="218.246" width="47.9796" height="13.8414">
@@ -161,6 +167,7 @@
     <property name="__anchorY" type="int" value="288"/>
     <property name="__cx" type="int" value="1"/>
     <property name="__cy" type="int" value="17"/>
+    <property name="link" type="int" value="1"/>
    </properties>
   </object>
   <object id="9" name="Level_5" type="Spawn_point" x="206.988" y="224.056" width="47.9796" height="13.8414">
@@ -169,6 +176,7 @@
     <property name="__anchorY" type="int" value="288"/>
     <property name="__cx" type="int" value="1"/>
     <property name="__cy" type="int" value="17"/>
+    <property name="link" type="int" value="2"/>
    </properties>
   </object>
  </objectgroup>

@@ -37,17 +37,26 @@ class MapManager:
             # Portals
             if obj.type == "Portal":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
-                self.portals.append((rect, obj.name, obj.link))
+                if hasattr(obj, "link") :
+                    self.portals.append((rect, obj.name, obj.link))
+                else:
+                    self.portals.append((rect, obj.name))
 
             # Walls
             elif obj.type == "Wall":
                 rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
                 self.walls.append(rect)
 
-    def get_spawn_point(self, src_map="main", link=0):
+    def get_spawn_point(self, src_map="Spawn_point", link=0):
         for obj in self.tmx_data.objects:
-            if obj.type == "spawn_point" and obj.name == src_map and obj.link == link:
-                return [obj.x, obj.y]
+            if obj.type == "Spawn_point" and obj.name == src_map:
+
+                if hasattr(obj, "link"):
+                    if obj.link == link:
+                        return [obj.x, obj.y]
+                else:
+                    return [obj.x, obj.y]
+                
         return 0, 0
 
     def get_map_size(self):
