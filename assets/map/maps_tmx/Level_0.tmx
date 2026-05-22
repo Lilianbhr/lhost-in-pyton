@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="7" nextobjectid="10">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#696a79" nextlayerid="7" nextobjectid="109">
  <tileset firstgid="1" name="TilesetField" tilewidth="16" tileheight="16" tilecount="75" columns="5" objectalignment="topleft">
   <image source="../tilesets/TilesetField.png" width="80" height="240"/>
  </tileset>
@@ -119,10 +119,865 @@
 </data>
  </layer>
  <objectgroup id="6" name="Entities">
-  <object id="5" name="main" type="spawn_point" x="48" y="160">
-   <point/>
+  <object id="1" name="Level_2" type="Portal" x="247.017" y="96.7668" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
+    <property name="link" type="int" value="1"/>
+   </properties>
   </object>
-  <object id="6" type="wall" x="80.3985" y="152.203" width="38.2586" height="60.7147"/>
-  <object id="9" type="wall" x="9.42603" y="151.371" width="22.1789" height="63.2099"/>
+  <object id="2" name="Level_2" type="Portal" x="248" y="224" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="264"/>
+    <property name="__anchorY" type="int" value="256"/>
+    <property name="__cx" type="int" value="16"/>
+    <property name="__cy" type="int" value="15"/>
+    <property name="link" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="3" name="Spawn_point" type="Spawn_point" x="40" y="160" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="56"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="3"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="4" name="Level_3" type="Portal" x="168.86" y="253.869" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="168"/>
+    <property name="__anchorY" type="int" value="288"/>
+    <property name="__cx" type="int" value="10"/>
+    <property name="__cy" type="int" value="17"/>
+   </properties>
+  </object>
+  <object id="5" name="Wall" type="Wall" x="0" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="6" name="Wall" type="Wall" x="0" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="7" name="Wall" type="Wall" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="64"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="4"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="8" name="Wall" type="Wall" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="9" name="Wall" type="Wall" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="10" name="Wall" type="Wall" x="0" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="11" name="Wall" type="Wall" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="12" name="Wall" type="Wall" x="32" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="32"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="2"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="13" name="Wall" type="Wall" x="48" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="48"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="3"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="14" name="Wall" type="Wall" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="64"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="4"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="15" name="Wall" type="Wall" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="64"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="4"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="16" name="Wall" type="Wall" x="80" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="17" name="Wall" type="Wall" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="18" name="Wall" type="Wall" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="19" name="Wall" type="Wall" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="20" name="Wall" type="Wall" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="21" name="Wall" type="Wall" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="22" name="Wall" type="Wall" x="16" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="23" name="Wall" type="Wall" x="0" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="24" name="Wall" type="Wall" x="16" y="160" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="160"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="25" name="Wall" type="Wall" x="16" y="176" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="176"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="26" name="Wall" type="Wall" x="16" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="27" name="Wall" type="Wall" x="16" y="208" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="208"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="28" name="Wall" type="Wall" x="0" y="208" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="208"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="29" name="Wall" type="Wall" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="30" name="Wall" type="Wall" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="31" name="Wall" type="Wall" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="32" name="Wall" type="Wall" x="112" y="160" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="160"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="33" name="Wall" type="Wall" x="112" y="176" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="176"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="34" name="Wall" type="Wall" x="112" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="35" name="Wall" type="Wall" x="96" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="36" name="Wall" type="Wall" x="80" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="37" name="Wall" type="Wall" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="176"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="38" name="Wall" type="Wall" x="80" y="160" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="160"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="39" name="Wall" type="Wall" x="80" y="208" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="208"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="40" name="Wall" type="Wall" x="96" y="208" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="208"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="41" name="Wall" type="Wall" x="144" y="208" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="208"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="42" name="Wall" type="Wall" x="128" y="208" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="208"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="43" name="Wall" type="Wall" x="128" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="44" name="Wall" type="Wall" x="144" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="45" name="Wall" type="Wall" x="16" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="46" name="Wall" type="Wall" x="0" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="47" name="Wall" type="Wall" x="0" y="240" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="240"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="48" name="Wall" type="Wall" x="16" y="240" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="240"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="49" name="Wall" type="Wall" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="50" name="Wall" type="Wall" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="51" name="Wall" type="Wall" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="52" name="Wall" type="Wall" x="144" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="53" name="Wall" type="Wall" x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="160"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="10"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="54" name="Wall" type="Wall" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="160"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="10"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="55" name="Wall" type="Wall" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="56" name="Wall" type="Wall" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="224"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="57" name="Wall" type="Wall" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="240"/>
+    <property name="__anchorY" type="int" value="64"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="58" name="Wall" type="Wall" x="224" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="224"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="59" name="Wall" type="Wall" x="208" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="208"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="13"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="60" name="Wall" type="Wall" x="192" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="192"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="12"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="61" name="Wall" type="Wall" x="176" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="176"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="11"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="62" name="Wall" type="Wall" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="160"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="10"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="63" name="Wall" type="Wall" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="64" name="Wall" type="Wall" x="144" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="65" name="Wall" type="Wall" x="240" y="48" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="240"/>
+    <property name="__anchorY" type="int" value="48"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="66" name="Wall" type="Wall" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="192"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="12"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="67" name="Wall" type="Wall" x="208" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="208"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="13"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="68" name="Wall" type="Wall" x="192" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="192"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="12"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="69" name="Wall" type="Wall" x="208" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="208"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="13"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="70" name="Wall" type="Wall" x="224" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="224"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="71" name="Wall" type="Wall" x="240" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="240"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="72" name="Wall" type="Wall" x="240" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="240"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="73" name="Wall" type="Wall" x="224" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="224"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="74" name="Wall" type="Wall" x="192" y="160" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="192"/>
+    <property name="__anchorY" type="int" value="160"/>
+    <property name="__cx" type="int" value="12"/>
+    <property name="__cy" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="75" name="Wall" type="Wall" x="192" y="176" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="192"/>
+    <property name="__anchorY" type="int" value="176"/>
+    <property name="__cx" type="int" value="12"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="76" name="Wall" type="Wall" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="192"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="12"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="77" name="Wall" type="Wall" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="240"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="78" name="Wall" type="Wall" x="224" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="224"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="79" name="Wall" type="Wall" x="208" y="192" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="208"/>
+    <property name="__anchorY" type="int" value="192"/>
+    <property name="__cx" type="int" value="13"/>
+    <property name="__cy" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="80" name="Wall" type="Wall" x="16" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="81" name="Wall" type="Wall" x="0" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="82" name="Wall" type="Wall" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="83" name="Wall" type="Wall" x="80" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="84" name="Wall" type="Wall" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="85" name="Wall" type="Wall" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="86" name="Wall" type="Wall" x="128" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="87" name="Wall" type="Wall" x="128" y="160" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="160"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="88" name="Wall" type="Wall" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="144"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="89" name="Wall" type="Wall" x="144" y="160" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="160"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="90" name="Wall" type="Wall" x="144" y="176" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="176"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="91" name="Wall" type="Wall" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="176"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="92" name="Wall" type="Wall" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="112"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="93" name="Wall" type="Wall" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="112"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="94" name="Wall" type="Wall" x="112" y="112" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="112"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="95" name="Wall" type="Wall" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="112"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="96" name="Wall" type="Wall" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="16"/>
+    <property name="__anchorY" type="int" value="112"/>
+    <property name="__cx" type="int" value="1"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="97" name="Wall" type="Wall" x="0" y="112" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="0"/>
+    <property name="__anchorY" type="int" value="112"/>
+    <property name="__cx" type="int" value="0"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="98" name="Wall" type="Wall" x="80" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="80"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="5"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="99" name="Wall" type="Wall" x="96" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="96"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="6"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="100" name="Wall" type="Wall" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="112"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="7"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="101" name="Wall" type="Wall" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="128"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="8"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="102" name="Wall" type="Wall" x="144" y="224" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="144"/>
+    <property name="__anchorY" type="int" value="224"/>
+    <property name="__cx" type="int" value="9"/>
+    <property name="__cy" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="103" name="Wall" type="Wall" x="224" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="224"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="14"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="104" name="Wall" type="Wall" x="240" y="80" width="16" height="16">
+   <properties>
+    <property name="__anchorX" type="int" value="240"/>
+    <property name="__anchorY" type="int" value="80"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="105" name="Level_2" type="Spawn_point" x="224.299" y="95.7852" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
+    <property name="link" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="106" name="Level_2" type="Spawn_point" x="210.619" y="225.146" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
+    <property name="link" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="107" name="Level_3" type="Spawn_point" x="166.39" y="233.22" width="32" height="32">
+   <properties>
+    <property name="__anchorX" type="int" value="248"/>
+    <property name="__anchorY" type="int" value="128"/>
+    <property name="__cx" type="int" value="15"/>
+    <property name="__cy" type="int" value="7"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
